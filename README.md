@@ -23,6 +23,85 @@ O sistema é baseado nas seguintes entidades:
 
 ![Diagrama de classes, representando as classes e sua relação](src/main/resources/assets/Modelagem-desafio-spring-boot.png)
 
+## Arquitetura do Projeto
+
+Este projeto segue uma arquitetura organizada em camadas, cada uma com responsabilidades bem definidas. Abaixo está a descrição de cada camada e suas respectivas classes:
+
+### Camadas
+
+1. **DTO (Data Transfer Object)**: Responsável por transportar dados entre as camadas da aplicação.
+   - `ClienteDTO.java`: Objeto de transferência de dados para a entidade Cliente.
+   - `ContatoDTO.java`: Objeto de transferência de dados para a entidade Contato.
+
+2. **Mapper**: Responsável por mapear entidades para DTOs e vice-versa.
+   - `ClienteMapper.java`: Mapeia a entidade Cliente para ClienteDTO e vice-versa.
+   - `ContatoMapper.java`: Mapeia a entidade Contato para ContatoDTO e vice-versa.
+
+3. **Service**: Contém a lógica de negócios da aplicação.
+   - `ClienteService.java`: Contém a lógica de negócios para operações relacionadas a clientes.
+
+4. **Domain**
+   - **Model**: Contém as classes de domínio da aplicação.
+     - `Cliente.java`: Representa a entidade Cliente.
+     - `Contato.java`: Representa a entidade Contato.
+   - **Repository**: Interface para operações de acesso a dados.
+     - `ClienteRepository.java`: Interface de repositório para a entidade Cliente.
+     - `ContatoRepository.java`: Interface de repositório para a entidade Contato.
+
+5. **Infrastructure**
+   - **Controller**: Contém os controladores que lidam com as requisições HTTP.
+     - `ClienteController.java`: Controlador para gerenciar as operações relacionadas a clientes.
+
+6. **Resources**
+   - **assets**: Diretório para armazenar recursos estáticos, como imagens, arquivos CSS, etc.
+   - `application.properties`: Arquivo de configuração da aplicação.
+
+### Estrutura de Pastas
+
+- `src/main/java/br/com/muralis/desafiospringboot`
+  - **application**
+    - **dto**
+      - `ClienteDTO.java`
+      - `ContatoDTO.java`
+    - **mapper**
+      - `ClienteMapper.java`
+      - `ContatoMapper.java`
+    - **service**
+      - `ClienteService.java`
+  - **domain**
+    - **model**
+      - `Cliente.java`
+      - `Contato.java`
+    - **repository**
+      - `ClienteRepository.java`
+      - `ContatoRepository.java`
+  - **infrastructure**
+    - **controller**
+      - `ClienteController.java`
+  - `DesafioSpringbootApplication.java`
+- `src/main/resources`
+  - **assets**
+  - `application.properties`
+- `src/test/java/br/com/muralis/desafiospringboot`
+  - `ClienteControllerTest.java`
+  - `ClienteServiceTest.java`
+  - `DesafioSpringbootApplicationTests.java`
+
+### Descrição das Classes
+
+- **`ClienteDTO`**: Define a estrutura de dados para transferir informações sobre clientes.
+- **`ContatoDTO`**: Define a estrutura de dados para transferir informações sobre contatos.
+- **`ClienteMapper`**: Converte objetos Cliente para ClienteDTO e vice-versa.
+- **`ContatoMapper`**: Converte objetos Contato para ContatoDTO e vice-versa.
+- **`ClienteService`**: Implementa a lógica de negócios para operações de clientes.
+- **`Cliente`**: Classe de domínio que representa um cliente.
+- **`Contato`**: Classe de domínio que representa um contato.
+- **`ClienteRepository`**: Interface de repositório para acesso a dados de clientes.
+- **`ContatoRepository`**: Interface de repositório para acesso a dados de contatos.
+- **`ClienteController`**: Controlador para gerenciar requisições HTTP relacionadas a clientes.
+- **`DesafioSpringbootApplication`**: Classe principal da aplicação Spring Boot.
+
+Com essa estrutura, o projeto é modular e de fácil manutenção, seguindo boas práticas de desenvolvimento com a separação clara de responsabilidades.
 
 ## Funcionalidades
 
