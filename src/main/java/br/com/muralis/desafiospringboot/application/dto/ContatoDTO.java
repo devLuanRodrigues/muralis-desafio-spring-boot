@@ -8,9 +8,9 @@ public class ContatoDTO {
     public ContatoDTO() {}
 
     public ContatoDTO(Long id, String tipo, String texto) {
-        this.id = id;
-        this.tipo = tipo;
-        this.texto = texto;
+        setId(id);
+        setTipo(tipo);
+        setTexto(texto);
     }
 
     public Long getId() {

@@ -20,10 +20,10 @@ public class Cliente {
     public Cliente() {}
 
     public Cliente(Long id, String nome, String dataCadastro, List<Contato> contatos) {
-        this.id = id;
-        this.nome = nome;
-        this.dataCadastro = dataCadastro;
-        this.contatos = contatos;
+        setId(id);
+        setNome(nome);
+        setDataCadastro(dataCadastro);
+        setContatos(contatos);
     }
 
     public Long getId() {

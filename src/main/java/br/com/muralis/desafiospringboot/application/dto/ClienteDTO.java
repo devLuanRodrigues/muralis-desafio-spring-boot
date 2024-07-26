@@ -11,10 +11,10 @@ public class ClienteDTO {
     public ClienteDTO() {}
 
     public ClienteDTO(Long id, String nome, String dataCadastro, List<ContatoDTO> contatos) {
-        this.id = id;
-        this.nome = nome;
-        this.dataCadastro = dataCadastro;
-        this.contatos = contatos;
+        setId(id);
+        setNome(nome);
+        setDataCadastro(dataCadastro);
+        setContatos(contatos);
     }
 
     public Long getId() {
