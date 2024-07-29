@@ -136,7 +136,7 @@ O projeto implementa as seguintes funcionalidades:
    ```bash
    mvn spring-boot:run
 
-4. **Acesse a API**
+4. **Acesse a API** <br>
    A API estará disponível em http://localhost:8080
 
 ## Endpoints
